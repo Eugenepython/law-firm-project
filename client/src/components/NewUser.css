@@ -1,0 +1,95 @@
+/* NewUser.css */
+body, html {
+    background-color: #e8e8e8; /* Light grey background */
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .new-user-container {
+    background-color: #ffffff; /* White background for the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .image-container {
+    height: 50vh; /* 50% of the viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .top-image {
+    
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .new-user-container h2 {
+    font-size: 2.5em; /* Larger heading font size */
+    margin-bottom: 20px;
+    color: #333; /* Dark grey text color */
+  }
+  
+  .nav-links {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between links */
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-item a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em; /* Larger font size for links */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .home-link a {
+    background-color: darkgray;
+    color: white;
+  }
+  
+  .home-link a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .lawfirm-link a {
+    background-color: darkgray;
+    color: white;
+  }
+  
+  .lawfirm-link a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .provider-link a {
+    background-color: darkgray;
+    color: white;
+  }
+  
+  .provider-link a:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  .outlet-container {
+    margin-top: 20px;
+  }
+  
