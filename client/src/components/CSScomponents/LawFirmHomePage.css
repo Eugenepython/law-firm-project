@@ -1,0 +1,139 @@
+.the-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.user-details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.user-details p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+h1 {
+  color: #333;
+}
+
+/* New button styles */
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.logout-button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+
+.home-button {
+  background-color: #1a1a1a; /* Dark, professional color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.home-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between each tab */
+}
+
+.tab {
+  padding: 15px;
+  background-color: #f8f8f8; /* Light background color */
+  border: 1px solid #ccc; /* Border to differentiate each tab */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Changes cursor to a pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.tab:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+  transform: translateY(-2px); /* Slightly raises the tab on hover */
+}
+
+.tab h2 {
+  margin: 0 0 10px; /* Adds space between the title and description */
+  font-size: 1.2em;
+  color: #333; /* Darker text color for the title */
+}
+
+.tab p {
+  margin: 0;
+  color: #666; /* Lighter text color for descriptions */
+}

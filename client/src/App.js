@@ -17,7 +17,7 @@ import CreateCase from './components/Lawfirmcomponents/CreateCase';
 import ViewCases from './components/Lawfirmcomponents/ViewCases';
 import LawCaseDetails from './components/Lawfirmcomponents/LawCaseDetails';
 import NewDisbursementPath from './components/Lawfirmcomponents/NewDisbursementPath'; 
-import ExistingDisbursementPaths from './components/Lawfirmcomponents/ExistingDisbursementPaths';
+import ExistingDisbursementPaths from './components/Lawfirmcomponents/TheExistingDisbursementPaths.js';
 
 function App() {
   return (
@@ -80,7 +80,7 @@ function App() {
           } 
         />
         <Route 
-          path="/existing-disbursement-paths/:caseId" 
+          path="/existing-disbursement-paths"  // Changed caseId to id to match the route for consistency
           element={
             <PrivateRoute>
               <ExistingDisbursementPaths />

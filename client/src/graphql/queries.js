@@ -67,3 +67,20 @@ export const GET_CASE = gql`
   }
 `;
 
+
+
+export const GET_DISBURSEMENT_PATHS = gql`
+  query GetDisbursementPaths($lawFirmId: ID!) {
+    getDisbursementPaths(lawFirmId: $lawFirmId) {
+      id
+      caseId
+      lawFirmId
+      providerName
+      invoiceReferences
+      expertDiscipline
+      createdAt
+      updatedAt
+    }
+  }
+`;
+
