@@ -1,0 +1,33 @@
+service: law-firm-graphql-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-west-1
+  environment:
+    IS_OFFLINE: ${self:custom.isOffline}
+    EMAIL_USER: ${env:EMAIL_USER}
+    EMAIL_PASS: ${env:EMAIL_PASS}
+    ADMIN_EMAIL: ${env:ADMIN_EMAIL}
+    DB_USER: ${env:DB_USER}
+    DB_HOST: ${env:DB_HOST}
+    DB_DATABASE: ${env:DB_DATABASE}
+    DB_PASSWORD: ${env:DB_PASSWORD}
+    DB_PORT: ${env:DB_PORT}
+    BASE_URL: ${env:BASE_URL}
+    JWT_SECRET: ${env:JWT_SECRET}
+    UMBRELLA: ${env:UMBRELLA}
+custom:
+    isOffline: ${opt:offline, false}
+functions:
+  graphql:
+    handler: server.handler
+    timeout: 29
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+
+plugins:
+  - serverless-offline

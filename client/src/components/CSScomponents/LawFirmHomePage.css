@@ -1,0 +1,591 @@
+.the-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.user-details {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.user-details p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+h1 {
+  color: #333;
+}
+
+/* New button styles */
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.button-container .action-button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 14px 24px; /* Increased padding */
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #003366; /* Dark Sapphire Blue */
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container .action-button:hover {
+  background-color: #004488; /* Slightly brighter royal blue */
+  border: 2px solid #002244;
+  transform: translateY(-2px);
+}
+
+.button-container .action-button:active {
+  background-color: #002244;
+  transform: scale(0.98);
+}
+
+
+
+
+/* Responsive Design - Stacks buttons on smaller screens */
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between buttons */
+  }
+
+  .action-button {
+    width: 100%;
+  }
+}
+
+
+
+.logout-button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+
+.home-button {
+  background-color: #1a1a1a; /* Dark, professional color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.home-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between each tab */
+}
+
+
+
+.tab:hover {
+  background-color: #e0e0e0; /* Darker background on hover */
+  transform: translateY(-2px); /* Slightly raises the tab on hover */
+}
+
+.tab h2 {
+  margin: 0 0 10px; /* Adds space between the title and description */
+  font-size: 1.2em;
+  color: #333; /* Darker text color for the title */
+}
+
+.tab p {
+  margin: 0;
+  color: #666; /* Lighter text color for descriptions */
+}
+
+
+
+
+
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the tabs horizontally */
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 15px;
+  margin: 5px; /* Reduced margin for a tighter layout */
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Slightly rounded corners for a square look */
+  background-color: #fff;
+  cursor: pointer;
+  flex: 1;
+  max-width: 200px; /* Set a max width to ensure tabs stay square-ish */
+  text-align: center; /* Center text inside the tab */
+  transition: background-color 0.3s ease;
+}
+
+.tab.active {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+.tab-header {
+  display: flex;
+  flex-direction: column; /* Stack provider name and expert discipline vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Fill the tab's height */
+}
+
+.provider-name {
+  font-weight: bold;
+  margin-bottom: 5px; /* Space between provider name and discipline */
+}
+
+.expert-discipline {
+  color: #555;
+}
+
+.details-container {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Styles for the modal content */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Initial pastel red background for the modal */
+.pastel-red-background {
+  background-color: #ffb3b3; /* Pastel Red */
+  color: black;
+}
+
+/* Green background for the modal when confirmed */
+.green-background {
+  background-color: #b3ffb3; /* Pastel Green */
+  color: black;
+}
+
+
+/* Container Styling */
+.pathchoice-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* New or Existing Path Buttons */
+.new-or-exising-path {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  background-color: #003366; /* Dark Sapphire Blue */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-or-exising-path:hover {
+  background-color: #002147; /* Slightly darker for hover */
+  transform: translateY(-2px);
+}
+
+.new-or-exising-path:active {
+  background-color: #00132b; /* Even darker for click */
+  transform: scale(0.98);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .pathchoice-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-or-exising-path {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+/* Centering the Home Button */
+.home-button-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically (if needed) */
+  margin-bottom: 20px;
+}
+
+
+/* Case Details Container */
+.case-details-content {
+  max-width: 700px; /* Ensures good readability */
+  margin: 20px auto; /* Centered but aligned with page flow */
+  padding: 15px;
+  border-left: 4px solid #003366; /* Legal-style left border */
+  background-color: #f9f9f9; /* Subtle background for professionalism */
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.this-tab {
+  max-width: 300px; /* Keeps readability */
+  margin: 20px 0; /* Removes auto-centering */
+  padding: 15px;
+  border-left: 4px solid #003366; /* Legal-style left border */
+  background-color: #f9f9f9; /* Subtle background */
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Ensures text inside is left-aligned */
+}
+
+
+/* Individual Case Detail Styling */
+.case-detail {
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif; /* Professional legal font */
+  color: #2c3e50;
+  padding: 5px 0;
+  margin-left: 15px; /* Indents all text */
+}
+
+/* Bold Text for Labels */
+.case-detail strong {
+  font-weight: bold;
+  color: #003366; /* Dark Sapphire Blue for contrast */
+}
+
+.action-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Primary Action Button */
+button.primary-button {
+  background-color: #003366 !important;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button.primary-button:hover {
+  background-color: #002147;
+  transform: translateY(-2px);
+}
+
+.button.primary-button:active {
+  background-color: #00132b;
+  transform: scale(0.98);
+}
+
+/* Main Container Styling */
+.new-disbursement-container {
+  max-width: 750px; /* Optimal width for readability */
+  margin: 30px auto; /* Centers the container on the page */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-left: 5px solid #003366; /* Dark Sapphire Blue left border for legal look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Ensures it adapts well on smaller screens */
+@media (max-width: 600px) {
+  .new-disbursement-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Back Button Wrapper - Centers it */
+.back-button-wrapper {
+  display: flex;
+  justify-content: flex-start; /* Aligns to left */
+  margin-bottom: 20px;
+}
+
+/* Back Button Styling */
+.back-button {
+  background-color: #003366; /* Dark Sapphire Blue */
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #002147; /* Slightly darker shade on hover */
+  transform: translateY(-2px);
+}
+
+.back-button:active {
+  background-color: #00132b; /* Even darker when clicked */
+  transform: scale(0.98);
+}
+
+
+
+.disbursement-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.disbursement-paths-content {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 15px;
+  border-left: 5px solid #003366; /* Dark Sapphire Blue Left Border */
+  background-color: #f9f9f9; /* Light grey background for legal feel */
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.case-detail {
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif; /* Professional legal font */
+  color: #2c3e50;
+  padding: 5px 0;
+  margin-left: 15px; /* Indent for a legal document look */
+}
+
+/* Bold labels */
+.case-detail strong {
+  font-weight: bold;
+  color: #003366; /* Dark Sapphire Blue for contrast */
+}
+
+/* === Main Container for Disbursement Paths Page === */
+.disbursement-paths-container {
+  max-width: 900px; /* Ensures good readability */
+  margin: 50px auto; /* Centered layout */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-left: 5px solid #003366; /* Dark Sapphire Blue Left Border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  text-align: left;
+}
+
+/* Page Title Styling */
+.disbursement-paths-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Professional Detail Formatting */
+.case-detail {
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif;
+  color: #2c3e50;
+  padding: 5px 0;
+  margin-left: 15px; /* Adds slight indentation */
+}
+
+/* Bold Labels */
+.case-detail strong {
+  font-weight: bold;
+  color: #003366; /* Dark Sapphire Blue */
+}
+
+/* Back Button Wrapper - Aligns Button to the Left */
+.back-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Back Button Styling */
+.back-button {
+  background-color: #003366; /* Dark Sapphire Blue */
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #002147; /* Darker shade for hover */
+  transform: translateY(-2px);
+}
+
+.back-button:active {
+  background-color: #00132b; /* Darker when clicked */
+  transform: scale(0.98);
+}
+
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers tabs horizontally */
+  gap: 15px; /* More spacing between tabs */
+  margin-bottom: 20px;
+}
+
+/* Individual Tab Styling */
+.tab {
+  padding: 18px; /* Slightly more padding for better clickability */
+  margin: 10px; /* Increased spacing */
+  border: 2px solid #bbb; /* Slightly thicker border */
+  border-radius: 12px; /* Rounded corners for a softer look */
+  background-color: #ffffff;
+  cursor: pointer;
+  flex: 1;
+  max-width: 220px; /* Slightly bigger tabs */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tab Hover Effect - More Shadow for Depth */
+.tab:hover {
+  background-color: #f0f0f0;
+  border-color: #888;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-3px); /* Slight floating effect */
+}
+
+/* Active Tab - Stands Out More */
+.tab.active {
+  background-color: #e0e0e0;
+  border-color: #555;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3); /* More pronounced 3D effect */
+  transform: translateY(-4px);
+}
+/* Tab Header Formatting */
+.tab-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .disbursement-paths-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .tabs-container {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+  }
+}

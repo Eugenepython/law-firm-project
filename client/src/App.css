@@ -1,0 +1,13 @@
+/* index.css or App.css */
+
+body, html {
+  background-color: #e8e8e8; /* or use rgba(232,232,232,1) */
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  height: 100%;
+}

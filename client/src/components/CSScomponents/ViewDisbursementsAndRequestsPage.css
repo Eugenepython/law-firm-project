@@ -1,0 +1,664 @@
+/* ViewDisbursementsAndRequestsPage.css */
+
+/* General Styles */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Header */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #1c3d63;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c3d63;
+    margin-bottom: 10px;
+  }
+  
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c5873;
+  }
+  
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c5873;
+  }
+  
+  h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Buttons for Expanding Sections with Cascading Colors */
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.1s ease-in-out;
+    margin: 5px;
+  }
+  
+  /* Law Firm Level */
+  button.law-firm {
+    background-color: #1c3d63;
+    color: white;
+  }
+  
+  button.law-firm:hover {
+    background-color: #14314a;
+  }
+  
+  button.law-firm:active {
+    background-color: #0d2234;
+    transform: scale(0.98);
+  }
+  
+  /* Client Level */
+  button.client {
+    background-color: #2c5873;
+    color: white;
+  }
+  
+  button.client:hover {
+    background-color: #21465b;
+  }
+  
+  button.client:active {
+    background-color: #163142;
+    transform: scale(0.98);
+  }
+  
+  /* Expert Level */
+  button.expert {
+    background-color: #3c708c;
+    color: white;
+  }
+  
+  button.expert:hover {
+    background-color: #2d5970;
+  }
+  
+  button.expert:active {
+    background-color: #1d3f50;
+    transform: scale(0.98);
+  }
+  
+  /* Report Level */
+  button.report {
+    background: #4a8dab;
+    color: white;
+  }
+  
+  button.report:hover {
+    background: #3a6e89;
+  }
+  
+  button.report:active {
+    background: #2a4e65;
+    transform: scale(0.98);
+  }
+  
+  /* Collapsible Sections */
+  ul {
+    list-style: none;
+    padding-left: 15px;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  /* Hierarchy Layout with Increased Indentation */
+  .law-firm-container {
+    padding: 10px;
+    background: #e3eaf2;
+    border-radius: 5px;
+    border-left: 4px solid #1c3d63;
+    margin: 10px 0;
+    padding-left: 10px; /* Minimal Indent */
+  }
+  
+  .client-container {
+    padding: 10px;
+    background: #d1dbe6;
+    border-radius: 5px;
+    border-left: 4px solid #2c5873;
+    margin-left: 30px; /* Increased Indentation */
+    padding-left: 15px;
+  }
+  
+  .expert-container {
+    padding: 10px;
+    background: #b9c7d4;
+    border-radius: 5px;
+    border-left: 4px solid #3c708c;
+    margin-left: 60px; /* Increased Indentation */
+    padding-left: 20px;
+  }
+  
+  .report-container {
+    padding: 10px;
+    background: #a3b8c5;
+    border-radius: 5px;
+    border-left: 4px solid #4a8dab;
+    margin-left: 90px; /* Increased Indentation */
+    padding-left: 25px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .law-firm-container {
+      margin-left: 10px;
+      padding-left: 8px;
+    }
+  
+    .client-container {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
+  
+    .expert-container {
+      margin-left: 40px;
+      padding-left: 15px;
+    }
+  
+    .report-container {
+      margin-left: 60px;
+      padding-left: 20px;
+    }
+  }
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Header */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #1c3d63;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c3d63;
+    margin-bottom: 10px;
+  }
+  
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c5873;
+  }
+  
+  h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c5873;
+  }
+  
+  h6 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Buttons for Expanding Sections with Cascading Colors */
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.1s ease-in-out;
+    margin: 5px;
+  }
+  
+  /* Law Firm Level */
+  button.law-firm {
+    background-color: #1c3d63;
+    color: white;
+  }
+  
+  button.law-firm:hover {
+    background-color: #14314a;
+  }
+  
+  button.law-firm:active {
+    background-color: #0d2234;
+    transform: scale(0.98);
+  }
+  
+  /* Client Level */
+  button.client {
+    background-color: #2c5873;
+    color: white;
+  }
+  
+  button.client:hover {
+    background-color: #21465b;
+  }
+  
+  button.client:active {
+    background-color: #163142;
+    transform: scale(0.98);
+  }
+  
+  /* Expert Level */
+  button.expert {
+    background-color: #3c708c;
+    color: white;
+  }
+  
+  button.expert:hover {
+    background-color: #2d5970;
+  }
+  
+  button.expert:active {
+    background-color: #1d3f50;
+    transform: scale(0.98);
+  }
+  
+  /* Report Level */
+  button.report {
+    background: #4a8dab;
+    color: white;
+  }
+  
+  button.report:hover {
+    background: #3a6e89;
+  }
+  
+  button.report:active {
+    background: #2a4e65;
+    transform: scale(0.98);
+  }
+  
+  /* Collapsible Sections */
+  ul {
+    list-style: none;
+    padding-left: 15px;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  /* Hierarchy Layout */
+  .law-firm-container {
+    padding: 10px;
+    background: #e3eaf2;
+    border-radius: 5px;
+    border-left: 4px solid #1c3d63;
+    margin: 10px 0;
+  }
+  
+  .client-container {
+    padding: 10px;
+    background: #d1dbe6;
+    border-radius: 5px;
+    border-left: 4px solid #2c5873;
+    margin-left: 20px;
+  }
+  
+  .expert-container {
+    padding: 10px;
+    background: #b9c7d4;
+    border-radius: 5px;
+    border-left: 4px solid #3c708c;
+    margin-left: 40px;
+  }
+  
+  .report-container {
+    padding: 10px;
+    background: #a3b8c5;
+    border-radius: 5px;
+    border-left: 4px solid #4a8dab;
+    margin-left: 60px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  
+/* Main title for the section */
+.firstTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 18px;
+    text-decoration: underline;
+    margin-left: 20px;
+  }
+  
+  /* First level group (Law Firms) */
+  .firstGroup {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  
+  /* Second level title (Clients heading) */
+  .secondTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 18px;
+    margin-left: 40px;
+  }
+  
+  /* Second level group (Client Names) */
+  .secondGroup {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-left: 30px;
+    display: inline-block;
+  }
+  
+  /* Third level title (Experts heading) */
+  .thirdTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 18px;
+    margin-left: 95px;
+  }
+  
+  /* Third level group (Expert Names) */
+  .thirdGroup {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-left: 30px;
+    display: inline-block;
+  }
+
+.fourthTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 5px;
+    margin-left: 130px;
+    padding-top: 20px;
+}
+
+
+  
+  /* Button styles for expand/collapse */
+  button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 5px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #1a5276;
+  }
+  
+  /* List styling */
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  
+  /* Individual list items */
+  li {
+    margin: 5px 0;
+  }
+  
+  /* Report buttons */
+  h6 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 60px;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+
+  .firstButton {
+    background-color:  black;
+    margin-left: 20px;
+    color: white;
+  }
+
+  .secondButton {
+    background-color:  #1a5276;
+    margin-left: 40px;
+  }
+
+  .thirdButton {
+    background-color: black;
+    margin-left: 95px;
+  }
+
+
+  .topButtons {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+  padding: 5px;
+    margin-bottom: 20px; 
+  }
+
+.topButton {
+  background-color: #003366; /* Dark Sapphire Blue */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topButton:hover {
+  background-color: #002147; /* Slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+.topButton:active {
+  background-color: #00132b; /* Even darker when clicked */
+  transform: scale(0.98);
+}
+
+.title {
+  font-size: 2.5rem; /* Larger size for the main title */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color:black;
+  font-size: 3.2em;
+}
+
+.subHeading {
+  font-size: 1.6rem; /* Slightly smaller than the main title */
+  font-weight: 600;  /* Increased font weight for more boldness */
+  text-align: left;  
+  color: #444; /* Slightly darker text for emphasis */
+  margin-left: 20px; /* Adds slight left indentation */
+}
+
+.acceptButton {
+  margin-right: 15px; /* Adjust as needed */
+}
+
+
+.fourthButton {
+  width: 60vw; /* 60% of the viewport width */
+
+  background-color: #0e3a5a;
+  margin-left:130px;
+   width: 60vw; /* 60% of the viewport width */
+   display: flex;
+   justify-content: center; /* Centers child elements */
+   align-items: center;
+
+  border: none;
+  padding: 6px 12px;
+
+  border-radius: 15px;
+}
+
+.report-card {
+  width: 80%; /* 80% of .fourthButton */
+  margin: 10px auto; /* Centers within .fourthButton */
+  padding: 15px;
+  border-left: 4px solid #003366; /* Legal-style left border */
+  background-color: #f9f9f9; /* Subtle background */
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: #003366;
+  font-size: 1.2em;
+}
+
+
+.navButtons {
+  position: absolute; /* Positions it relative to the viewport */
+  top: 20px; /* Moves it down slightly from the top */
+  left: 20px; /* Indents it from the left */
+}
+
+.homeButton {
+  background-color: black; /* Dark Sapphire Blue */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left:20x;
+}
+
+.homeButton:hover {
+  background-color: #002147; /* Slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+.homeButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+.user-heading-container {
+  background-color: #f9f9f9; /* Light gray background for professionalism */
+  padding: 20px;
+  margin: 20px auto; /* Centers the container */
+  border-radius: 6px;
+  border-left: 4px solid #003366; /* Legal-style left accent */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 500px; /* Restricts width */
+  width: 90%; /* Ensures responsiveness */
+}
+
+.subHeading {
+  color: #003366; /* Dark Sapphire Blue */
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase; /* Legal, professional style */
+  letter-spacing: 0.5px; /* Slight spacing for refinement */
+}
+
+.subHeading span {
+  font-weight: normal;
+  text-transform: none;
+  color: #333; /* Slightly softer contrast for details */
+}
+
+.left-margin {
+  margin-left: 20px; /* Adds a slight left margin */
+}
+
+.respond-close {
+  background-color: black; /* Dark Sapphire Blue */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left:20x;
+}

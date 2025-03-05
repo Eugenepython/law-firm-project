@@ -1,0 +1,186 @@
+/* Modal.css */
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    width: 100vw; /* Full width to cover the viewport */
+    height: 100vh; /* Full height to cover the viewport */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh; /* Limit modal content height */
+    overflow-y: auto; /* Enable scrolling if content exceeds modal height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .disbursements-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .disbursements-column {
+    flex: 1;
+  }
+  
+
+  .disbursement-tab {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+  }
+  
+  .disbursement-tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+
+  /* Main Container Styling */
+.disbursement-path-container {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-left: 5px solid #003366; /* Dark Sapphire Blue left border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button Wrapper */
+.back-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Back Button Styling */
+.back-button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #002147;
+  transform: translateY(-2px);
+}
+
+.back-button:active {
+  background-color: #00132b;
+  transform: scale(0.98);
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Case Details Section */
+.case-details-content {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  border-left: 4px solid #003366;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Individual Case Detail */
+.case-detail {
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', serif;
+  color: #2c3e50;
+  padding: 5px 0;
+  margin-left: 15px;
+}
+
+/* Bold Text for Labels */
+.case-detail strong {
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Buttons Wrapper */
+.action-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Primary Button */
+.primary-button {
+  background-color: #003366;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+  background-color: #002147;
+  transform: translateY(-2px);
+}
+
+.primary-button:active {
+  background-color: #00132b;
+  transform: scale(0.98);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.radio-group {
+  margin-top: 5px;
+}
+
+/* Secondary Button */
+.secondary-button {
+  background-color: #666;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: #444;
+}
