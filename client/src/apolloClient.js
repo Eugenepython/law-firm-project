@@ -10,6 +10,11 @@ const httpLink = createHttpLink({
   uri: process.env.NEXT_PUBLIC_GRAPHQL_API || 'http://localhost:4000/graphql',
 });
 
+console.log('httpLink URI:', httpLink);
+console.log('process.env.NEXT_PUBLIC_GRAPHQL_API:', process.env.NEXT_PUBLIC_GRAPHQL_API);
+
+// so as i understand it, when i deploy this again on aws and on vercel, then i should be able to see in console hopefully, wht is console logged here? and in production 
+// i should see the AWS link  and in development i should see the localhost link.
 
 // Middleware to add the token to headers
 const authLink = setContext((_, { headers }) => {
