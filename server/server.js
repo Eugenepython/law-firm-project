@@ -38,6 +38,7 @@ const corsOptions = {
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'X-Refresh-Token'],
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 app.use('/api', verifyRoutes);
 
