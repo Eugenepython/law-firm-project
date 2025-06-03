@@ -21,7 +21,19 @@ const app = express();
 
 // ✅ CORS settings
 const corsOptions = {
-  origin: '*',
+  //origin: '*',
+  origin: function (origin, callback) {
+    const allowed = [
+      'http://localhost:3000',
+      'https://disbursement-tracker.vercel.app',
+      'https://disbursement-tracker.rubrikal.co.uk'
+    ];
+    if (!origin || allowed.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Blocked by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'X-Refresh-Token'],
   credentials: true,
