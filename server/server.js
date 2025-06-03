@@ -23,6 +23,7 @@ const app = express();
 const corsOptions = {
   //origin: '*',
   origin: function (origin, callback) {
+     console.log("CORS origin received:", origin); 
     const allowed = [
       'http://localhost:3000',
       'https://disbursement-tracker.vercel.app',

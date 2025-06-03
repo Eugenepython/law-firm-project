@@ -91,7 +91,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-west-1-ac99bb72-eed5",
-          "S3Key": "serverless/law-firm-graphql-api/dev/1741195137245-2025-03-05T17:18:57.245Z/law-firm-graphql-api.zip"
+          "S3Key": "serverless/law-firm-graphql-api/dev/1748992311546-2025-06-03T23:11:51.546Z/law-firm-graphql-api.zip"
         },
         "Handler": "server.handler",
         "Runtime": "nodejs18.x",
@@ -125,14 +125,14 @@
         "GraphqlLogGroup"
       ]
     },
-    "GraphqlLambdaVersionUKgwkb4pumxewohpevP3M4eog1bn1HQY1jMkE11keo": {
+    "GraphqlLambdaVersionuIKSoXKQRnrxo9xj0kw964ePYIgrYCi5eeq9ka9zE": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GraphqlLambdaFunction"
         },
-        "CodeSha256": "OlIyfTqBDhKmg4r4ykkE4hSYkziIjpIPE69zck8Oe7g="
+        "CodeSha256": "FhydVNaJLBwxlLRKRyeUt7TkDhWDjQC85Q5Plj7cKwQ="
       }
     },
     "ApiGatewayRestApi": {
@@ -253,7 +253,7 @@
         "GraphqlLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1741195112083": {
+    "ApiGatewayDeployment1748992285295": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -314,7 +314,7 @@
     "GraphqlLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GraphqlLambdaVersionUKgwkb4pumxewohpevP3M4eog1bn1HQY1jMkE11keo"
+        "Ref": "GraphqlLambdaVersionuIKSoXKQRnrxo9xj0kw964ePYIgrYCi5eeq9ka9zE"
       },
       "Export": {
         "Name": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"
