@@ -14,7 +14,7 @@ provider:
     DB_DATABASE: ${env:DB_DATABASE}
     DB_PASSWORD: ${env:DB_PASSWORD}
     DB_PORT: ${env:DB_PORT}
-    BASE_URL: ${env:BASE_URL}
+    BASE_URL: https://disbursement-tracker.rubrikal.co.uk
     JWT_SECRET: ${env:JWT_SECRET}
     UMBRELLA: ${env:UMBRELLA}
 custom:

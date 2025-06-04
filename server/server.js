@@ -125,4 +125,3 @@ if (process.env.AWS_EXECUTION_ENV) {
 
 export { handler };
 
-
