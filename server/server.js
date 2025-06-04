@@ -99,11 +99,9 @@ async function startApolloServer() {
   });
 }
 
-// ✅ Ensure the server starts before exporting the handler
 let serverPromise = startApolloServer();
 
-// ✅ Unified execution for AWS Lambda & Local Mode
-// ✅ Unified execution for AWS Lambda & Local Mode
+
 let handler;
 
 if (process.env.AWS_EXECUTION_ENV) {

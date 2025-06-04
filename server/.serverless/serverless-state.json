@@ -117,7 +117,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-west-1-ac99bb72-eed5",
-                "S3Key": "serverless/law-firm-graphql-api/dev/1749056133879-2025-06-04T16:55:33.879Z/law-firm-graphql-api.zip"
+                "S3Key": "serverless/law-firm-graphql-api/dev/1749072458843-2025-06-04T21:27:38.843Z/law-firm-graphql-api.zip"
               },
               "Handler": "server.handler",
               "Runtime": "nodejs18.x",
@@ -151,14 +151,14 @@
               "GraphqlLogGroup"
             ]
           },
-          "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c": {
+          "GraphqlLambdaVersionBBp72clVBTz9y5ix6yqDW0wbxczBymoJyJiY3m3Hi0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "PcqKMRXj2HUG4DOidFDli20U7vwHvpwPFt4QVfTfD1k="
+              "CodeSha256": "U2LbQ5WLPKZ6pdUZrZVNa8n4rdu8X/h4DGlKNdyujTU="
             }
           },
           "ApiGatewayRestApi": {
@@ -183,6 +183,33 @@
                 ]
               },
               "PathPart": "graphql",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceApi": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Fn::GetAtt": [
+                  "ApiGatewayRestApi",
+                  "RootResourceId"
+                ]
+              },
+              "PathPart": "api",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceApiVerify": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Ref": "ApiGatewayResourceApi"
+              },
+              "PathPart": "verify",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -227,6 +254,51 @@
               },
               "ResourceId": {
                 "Ref": "ApiGatewayResourceGraphql"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodApiVerifyOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": ""
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceApiVerify"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -279,7 +351,53 @@
               "GraphqlLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1749056112928": {
+          "ApiGatewayMethodApiVerifyGet": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "HttpMethod": "GET",
+              "RequestParameters": {},
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceApiVerify"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "ApiKeyRequired": false,
+              "AuthorizationType": "NONE",
+              "Integration": {
+                "IntegrationHttpMethod": "POST",
+                "Type": "AWS_PROXY",
+                "Uri": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":apigateway:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":lambda:path/2015-03-31/functions/",
+                      {
+                        "Fn::GetAtt": [
+                          "GraphqlLambdaFunction",
+                          "Arn"
+                        ]
+                      },
+                      "/invocations"
+                    ]
+                  ]
+                }
+              },
+              "MethodResponses": []
+            },
+            "DependsOn": [
+              "GraphqlLambdaPermissionApiGateway"
+            ]
+          },
+          "ApiGatewayDeployment1749072437614": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -289,7 +407,9 @@
             },
             "DependsOn": [
               "ApiGatewayMethodGraphqlOptions",
-              "ApiGatewayMethodGraphqlPost"
+              "ApiGatewayMethodApiVerifyOptions",
+              "ApiGatewayMethodGraphqlPost",
+              "ApiGatewayMethodApiVerifyGet"
             ]
           },
           "GraphqlLambdaPermissionApiGateway": {
@@ -340,7 +460,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
+              "Ref": "GraphqlLambdaVersionBBp72clVBTz9y5ix6yqDW0wbxczBymoJyJiY3m3Hi0"
             },
             "Export": {
               "Name": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"
@@ -411,6 +531,29 @@
               },
               "integration": "AWS_PROXY"
             }
+          },
+          {
+            "http": {
+              "path": "api/verify",
+              "method": "get",
+              "cors": {
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "GET"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ],
+                "allowCredentials": false
+              },
+              "integration": "AWS_PROXY"
+            }
           }
         ],
         "name": "law-firm-graphql-api-dev-graphql",
@@ -418,7 +561,7 @@
         "memory": 1024,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
+        "versionLogicalId": "GraphqlLambdaVersionBBp72clVBTz9y5ix6yqDW0wbxczBymoJyJiY3m3Hi0"
       }
     },
     "configValidationMode": "warn",
@@ -444,7 +587,7 @@
     "artifact": "C:\\Users\\eugen\\OneDrive\\Desktop\\disb tracker app\\server\\.serverless\\law-firm-graphql-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/law-firm-graphql-api/dev/1749056133879-2025-06-04T16:55:33.879Z",
+    "artifactDirectoryName": "serverless/law-firm-graphql-api/dev/1749072458843-2025-06-04T21:27:38.843Z",
     "artifact": "law-firm-graphql-api.zip"
   }
 }

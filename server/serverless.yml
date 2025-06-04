@@ -17,8 +17,10 @@ provider:
     BASE_URL: https://disbursement-tracker.rubrikal.co.uk
     JWT_SECRET: ${env:JWT_SECRET}
     UMBRELLA: ${env:UMBRELLA}
+
 custom:
-    isOffline: ${opt:offline, false}
+  isOffline: ${opt:offline, false}
+
 functions:
   graphql:
     handler: server.handler
@@ -28,6 +30,18 @@ functions:
           path: graphql
           method: post
           cors: true
+      - http:
+          path: api/verify
+          method: get
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
 
 plugins:
   - serverless-offline
