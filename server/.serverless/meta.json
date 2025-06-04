@@ -19,7 +19,7 @@
           "DB_DATABASE": "law_firms",
           "DB_PASSWORD": "<REDACTED>",
           "DB_PORT": "5432",
-          "BASE_URL": "http://localhost:3000",
+          "BASE_URL": "https://disbursement-tracker.rubrikal.co.uk",
           "JWT_SECRET": "<REDACTED>",
           "UMBRELLA": "euroka"
         },
@@ -118,7 +118,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-west-1-ac99bb72-eed5",
-                  "S3Key": "serverless/law-firm-graphql-api/dev/1749037793441-2025-06-04T11:49:53.441Z/law-firm-graphql-api.zip"
+                  "S3Key": "serverless/law-firm-graphql-api/dev/1749056133879-2025-06-04T16:55:33.879Z/law-firm-graphql-api.zip"
                 },
                 "Handler": "server.handler",
                 "Runtime": "nodejs18.x",
@@ -136,7 +136,7 @@
                     "DB_DATABASE": "law_firms",
                     "DB_PASSWORD": "<REDACTED>",
                     "DB_PORT": "5432",
-                    "BASE_URL": "http://localhost:3000",
+                    "BASE_URL": "https://disbursement-tracker.rubrikal.co.uk",
                     "JWT_SECRET": "<REDACTED>",
                     "UMBRELLA": "euroka"
                   }
@@ -152,14 +152,14 @@
                 "GraphqlLogGroup"
               ]
             },
-            "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg": {
+            "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "GraphqlLambdaFunction"
                 },
-                "CodeSha256": "a3Np3P8oYqcP4INLX4uBeJSNc2LwkcXawvxPvvwWLxo="
+                "CodeSha256": "PcqKMRXj2HUG4DOidFDli20U7vwHvpwPFt4QVfTfD1k="
               }
             },
             "ApiGatewayRestApi": {
@@ -280,7 +280,7 @@
                 "GraphqlLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1749037765517": {
+            "ApiGatewayDeployment1749056112928": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -341,7 +341,7 @@
             "GraphqlLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg"
+                "Ref": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
               },
               "Export": {
                 "Name": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"
@@ -415,7 +415,7 @@
           "memory": 1024,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg"
+          "versionLogicalId": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
         }
       },
       "plugins": [
@@ -436,7 +436,7 @@
         "DB_DATABASE": "law_firms",
         "DB_PASSWORD": "<REDACTED>",
         "DB_PORT": "5432",
-        "BASE_URL": "http://localhost:3000",
+        "BASE_URL": "https://disbursement-tracker.rubrikal.co.uk",
         "JWT_SECRET": "<REDACTED>",
         "UMBRELLA": "euroka"
       },
@@ -535,7 +535,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-west-1-ac99bb72-eed5",
-                "S3Key": "serverless/law-firm-graphql-api/dev/1749037793441-2025-06-04T11:49:53.441Z/law-firm-graphql-api.zip"
+                "S3Key": "serverless/law-firm-graphql-api/dev/1749056133879-2025-06-04T16:55:33.879Z/law-firm-graphql-api.zip"
               },
               "Handler": "server.handler",
               "Runtime": "nodejs18.x",
@@ -553,7 +553,7 @@
                   "DB_DATABASE": "law_firms",
                   "DB_PASSWORD": "<REDACTED>",
                   "DB_PORT": "5432",
-                  "BASE_URL": "http://localhost:3000",
+                  "BASE_URL": "https://disbursement-tracker.rubrikal.co.uk",
                   "JWT_SECRET": "<REDACTED>",
                   "UMBRELLA": "euroka"
                 }
@@ -569,14 +569,14 @@
               "GraphqlLogGroup"
             ]
           },
-          "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg": {
+          "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GraphqlLambdaFunction"
               },
-              "CodeSha256": "a3Np3P8oYqcP4INLX4uBeJSNc2LwkcXawvxPvvwWLxo="
+              "CodeSha256": "PcqKMRXj2HUG4DOidFDli20U7vwHvpwPFt4QVfTfD1k="
             }
           },
           "ApiGatewayRestApi": {
@@ -697,7 +697,7 @@
               "GraphqlLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1749037765517": {
+          "ApiGatewayDeployment1749056112928": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -758,7 +758,7 @@
           "GraphqlLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg"
+              "Ref": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
             },
             "Export": {
               "Name": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"
@@ -803,13 +803,12 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "serviceRawFile": "service: law-firm-graphql-api\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: eu-west-1\r\n  environment:\r\n    IS_OFFLINE: ${self:custom.isOffline}\r\n    EMAIL_USER: ${env:EMAIL_USER}\r\n    EMAIL_PASS: ${env:EMAIL_PASS}\r\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL}\r\n    DB_USER: ${env:DB_USER}\r\n    DB_HOST: ${env:DB_HOST}\r\n    DB_DATABASE: ${env:DB_DATABASE}\r\n    DB_PASSWORD: ${env:DB_PASSWORD}\r\n    DB_PORT: ${env:DB_PORT}\r\n    BASE_URL: ${env:BASE_URL}\r\n    JWT_SECRET: ${env:JWT_SECRET}\r\n    UMBRELLA: ${env:UMBRELLA}\r\ncustom:\r\n    isOffline: ${opt:offline, false}\r\nfunctions:\r\n  graphql:\r\n    handler: server.handler\r\n    timeout: 29\r\n    events:\r\n      - http:\r\n          path: graphql\r\n          method: post\r\n          cors: true\r\n\r\nplugins:\r\n  - serverless-offline\r\n",
+    "serviceRawFile": "service: law-firm-graphql-api\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: eu-west-1\r\n  environment:\r\n    IS_OFFLINE: ${self:custom.isOffline}\r\n    EMAIL_USER: ${env:EMAIL_USER}\r\n    EMAIL_PASS: ${env:EMAIL_PASS}\r\n    ADMIN_EMAIL: ${env:ADMIN_EMAIL}\r\n    DB_USER: ${env:DB_USER}\r\n    DB_HOST: ${env:DB_HOST}\r\n    DB_DATABASE: ${env:DB_DATABASE}\r\n    DB_PASSWORD: ${env:DB_PASSWORD}\r\n    DB_PORT: ${env:DB_PORT}\r\n    BASE_URL: https://disbursement-tracker.rubrikal.co.uk\r\n    JWT_SECRET: ${env:JWT_SECRET}\r\n    UMBRELLA: ${env:UMBRELLA}\r\ncustom:\r\n    isOffline: ${opt:offline, false}\r\nfunctions:\r\n  graphql:\r\n    handler: server.handler\r\n    timeout: 29\r\n    events:\r\n      - http:\r\n          path: graphql\r\n          method: post\r\n          cors: true\r\n\r\nplugins:\r\n  - serverless-offline\r\n",
     "command": [
       "deploy"
     ],
     "options": {
-      "config": "./serverless.yml",
-      "force": true
+      "config": ".\\serverless.yml"
     },
     "orgId": "e32893a0-c390-4c75-9d6b-1d24b27b67f5",
     "orgName": "eugenesorganisation",
@@ -819,12 +818,12 @@
     "serviceProviderAwsCfStackName": "law-firm-graphql-api-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-west-1:200162478024:stack/law-firm-graphql-api-dev/4e96ab80-f9c7-11ef-b34c-0afcd6d45bab",
     "serviceProviderAwsCfStackCreated": "2025-03-05T13:39:48.488Z",
-    "serviceProviderAwsCfStackUpdated": "2025-06-04T10:51:47.966Z",
+    "serviceProviderAwsCfStackUpdated": "2025-06-04T11:49:58.069Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "GraphqlLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-west-1:200162478024:function:law-firm-graphql-api-dev-graphql:26",
+        "OutputValue": "arn:aws:lambda:eu-west-1:200162478024:function:law-firm-graphql-api-dev-graphql:27",
         "Description": "Current Lambda function version",
         "ExportName": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"
       },
@@ -933,7 +932,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-west-1-ac99bb72-eed5",
-              "S3Key": "serverless/law-firm-graphql-api/dev/1749037793441-2025-06-04T11:49:53.441Z/law-firm-graphql-api.zip"
+              "S3Key": "serverless/law-firm-graphql-api/dev/1749056133879-2025-06-04T16:55:33.879Z/law-firm-graphql-api.zip"
             },
             "Handler": "server.handler",
             "Runtime": "nodejs18.x",
@@ -951,7 +950,7 @@
                 "DB_DATABASE": "law_firms",
                 "DB_PASSWORD": "<REDACTED>",
                 "DB_PORT": "5432",
-                "BASE_URL": "http://localhost:3000",
+                "BASE_URL": "https://disbursement-tracker.rubrikal.co.uk",
                 "JWT_SECRET": "<REDACTED>",
                 "UMBRELLA": "euroka"
               }
@@ -967,14 +966,14 @@
             "GraphqlLogGroup"
           ]
         },
-        "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg": {
+        "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "GraphqlLambdaFunction"
             },
-            "CodeSha256": "a3Np3P8oYqcP4INLX4uBeJSNc2LwkcXawvxPvvwWLxo="
+            "CodeSha256": "PcqKMRXj2HUG4DOidFDli20U7vwHvpwPFt4QVfTfD1k="
           }
         },
         "ApiGatewayRestApi": {
@@ -1095,7 +1094,7 @@
             "GraphqlLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1749037765517": {
+        "ApiGatewayDeployment1749056112928": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -1156,7 +1155,7 @@
         "GraphqlLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg"
+            "Ref": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
           },
           "Export": {
             "Name": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"

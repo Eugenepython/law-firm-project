@@ -91,7 +91,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-eu-west-1-ac99bb72-eed5",
-          "S3Key": "serverless/law-firm-graphql-api/dev/1749037793441-2025-06-04T11:49:53.441Z/law-firm-graphql-api.zip"
+          "S3Key": "serverless/law-firm-graphql-api/dev/1749056133879-2025-06-04T16:55:33.879Z/law-firm-graphql-api.zip"
         },
         "Handler": "server.handler",
         "Runtime": "nodejs18.x",
@@ -109,7 +109,7 @@
             "DB_DATABASE": "law_firms",
             "DB_PASSWORD": "vienna1981",
             "DB_PORT": "5432",
-            "BASE_URL": "http://localhost:3000",
+            "BASE_URL": "https://disbursement-tracker.rubrikal.co.uk",
             "JWT_SECRET": "your_secret_key",
             "UMBRELLA": "euroka"
           }
@@ -125,14 +125,14 @@
         "GraphqlLogGroup"
       ]
     },
-    "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg": {
+    "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GraphqlLambdaFunction"
         },
-        "CodeSha256": "a3Np3P8oYqcP4INLX4uBeJSNc2LwkcXawvxPvvwWLxo="
+        "CodeSha256": "PcqKMRXj2HUG4DOidFDli20U7vwHvpwPFt4QVfTfD1k="
       }
     },
     "ApiGatewayRestApi": {
@@ -253,7 +253,7 @@
         "GraphqlLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1749037765517": {
+    "ApiGatewayDeployment1749056112928": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -314,7 +314,7 @@
     "GraphqlLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GraphqlLambdaVersionAeh4bzsECqBk0gJTp97Z77wBeia66KwDlji4bV9leg"
+        "Ref": "GraphqlLambdaVersionBqVrwGJ3gqUwiAMFOccSCGfKkVsAEMj6ZF56PlCh7c"
       },
       "Export": {
         "Name": "sls-law-firm-graphql-api-dev-GraphqlLambdaFunctionQualifiedArn"
