@@ -6,14 +6,15 @@ import '../CSScomponents/VerifyAccount.css'; // Import the CSS file
 const VerifyAccount = () => {
   const location = useLocation();
   const [status, setStatus] = useState('Verifying your account...');
-
+console.log("hello")
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
     const token = queryParams.get('token');
 
     if (token) {
-      // Call the backend API to verify the token
-      fetch(`http://localhost:4000/api/verify?token=${token}`)
+       console.log("API URL:", process.env.REACT_APP_API_URL); // ✅ Confirm which URL is used
+      fetch(`${process.env.REACT_APP_API_URL}/api/verify?token=${token}`)
+      //fetch(`http://localhost:4000/api/verify?token=${token}`)
         .then(response => response.text())
         .then(data => {
           console.log(data);

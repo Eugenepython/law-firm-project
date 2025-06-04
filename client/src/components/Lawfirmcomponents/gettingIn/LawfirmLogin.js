@@ -31,6 +31,7 @@ const LawfirmLogin = () => {
       return;
     }
 
+
     try {
       console.log('Attempting to log in with:', { username, password });
 
