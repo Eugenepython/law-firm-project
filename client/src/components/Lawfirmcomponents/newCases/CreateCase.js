@@ -266,6 +266,7 @@ const CreateCase = () => {
             <option value="Professional Negligence">
               Professional Negligence
             </option>
+            <option value="Personal Injury">Personal Injury</option>
             <option value="Product Liability">Product Liability</option>
             <option value="Property Damage">Property Damage</option>
             <option value="Public Liability">Public Liability</option>
