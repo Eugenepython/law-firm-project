@@ -190,7 +190,8 @@ providerRequestPasswordReset: async (_, { email }) => {
       [resetToken, tokenExpiry, email]
     );
     await client.query('COMMIT');
-    const resetLink = `http://localhost:3000/provider-reset-password?token=${resetToken}`;
+    //const resetLink = `http://localhost:3000/provider-reset-password?token=${resetToken}`;
+    const resetLink = `${process.env.FRONTEND_URL}/provider-reset-password?token=${resetToken}`;
     console.log("✅ Reset link generated:", resetLink);
     await sendProviderPasswordResetEmail(email, resetLink);
     return { success: true, message: "Password reset link sent to email." };
